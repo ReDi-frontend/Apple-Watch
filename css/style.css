@@ -58,10 +58,12 @@ ul {
 .button {
     display: inline-block;
     padding: 12px 38px;
+    min-width: 260px;
     border: 0;
     background-color: var(--primary);
     color: #fff;
     text-transform: uppercase;
+    text-align: center;
     font-size: 18px;
     line-height: 1.5;
     font-weight: bold;
@@ -243,6 +245,47 @@ ul {
     box-shadow: 16px 0 0 0 #ddd, 32px 0 0 0 #ddd;
 }
 /* //FEATURES */
+
+
+/* PROMO */
+.promo {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+.promo-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.promo-img {
+    width: 400px;
+    height: 600px;
+    object-fit: contain;
+}
+/* //PROMO */
+
+
+/* RUNNERS */
+.runners {
+    padding-top: 240px;
+    padding-bottom: 240px;
+    background-image: url(../img/runners\ 1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+.runners-lead-cta {
+    margin-left: auto;
+}
+.runners-lead-cta .lead-cta-title {
+    color: #fff;
+}
+.runners-lead-cta .lead-cta-text {
+    color: #fff;
+    border-left: 3px solid #fff;
+}
+/* //RUNNERS */
 /* //MAIN CONTENT */
 
 /* RETINA BG */
@@ -253,6 +296,8 @@ ul {
     only screen and (        min-device-pixel-ratio: 2),
     only screen and (                min-resolution: 192dpi),
     only screen and (                min-resolution: 2dppx) {
-        /* retina bg img */
+        .runners {
+            background-image: url(../img/runners\ 1@2x.jpg);
+        }
 }
 /* //RETINA BG */
