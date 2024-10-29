@@ -1,6 +1,7 @@
 /* CUSTOM PROPERTY */
 :root {
     --primary: #ea625c;
+    --primary-dark: #c9514c;
     --text-color: #333;
     --font: "Roboto", "Arial", sans-serif;
 }
@@ -48,6 +49,51 @@ ul {
     margin: 0;
 }
 
+*:focus {
+    outline: 2px dashed var(--primary);
+    outline-offset: 2px;
+}
+
+/* button */
+.button {
+    display: inline-block;
+    padding: 12px 38px;
+    border: 0;
+    background-color: var(--primary);
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out;
+}
+.button:hover{
+    background-color: var(--primary-dark);
+}
+.button:active {
+    opacity: 0.6;
+}
+
+.liend-link {
+    display: inline-flex;
+    align-items: center;
+    color: var(--primary);
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 1.6;
+    font-weight: 700;
+}
+.liend-link::before {
+    content: "";
+    width: 40px;
+    height: 3px;
+    margin-right: 10px;
+    background-color: var(--primary);
+    transition: width 0.3s ease-in-out;
+}
+.liend-link:hover::before {
+    width: 60px;
+}
 
 /* CONTAINER */
 .container{
@@ -59,10 +105,6 @@ ul {
     margin-right: auto;
 }
 
-/* MAIN CONTENT */
-.main-content{
-    flex-grow: 1;
-}
 
 /* SITE HEADER */
 .site-header {
@@ -75,7 +117,7 @@ ul {
 }
 .site-header-logo {
     margin-right: auto;
-    transition: all 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
 }
 .site-header-logo:hover {
     opacity: 0.8;
@@ -108,7 +150,7 @@ ul {
     padding-top: 6px;
     padding-bottom: 3px;
     border-bottom: 3px solid transparent;
-    transition: all 0.3s ease-in-out;
+    transition: border-bottom 0.3s ease-in-out;
 }
 .site-nav-link:hover {
     border-bottom: 3px solid #333;
@@ -124,7 +166,84 @@ ul {
 /* //SITE HEADER */
 
 
+/* MAIN CONTENT */
+.main-content{
+    flex-grow: 1;
+}
 
+/* HERO */
+.hero {
+    padding-top: 140px;
+    padding-bottom: 185px;
+    border-bottom: 2px solid #ddd;
+    background-image: url(../img/intro-bg1.jpg);
+    background-repeat: no-repeat;
+    background-size: 587px 565px;
+    background-position: left calc(50% + 565px) bottom;
+}
+
+/* lead cta */
+.lead-cta {
+    width: 100%;
+    max-width: 490px;
+}
+.lead-cta-title {
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-size: 50px;
+    line-height: 1.2;
+    color: #000;
+}
+.lead-cta-text {
+    border-left: 3px solid #888;
+    padding-left: 37px;
+    color: #777;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+/* //HERO */
+
+
+/* FEATURES */
+.features {
+    padding-top: 70px;
+    padding-bottom: 70px;
+}
+.features-list {
+    display: flex;
+}
+.features-item {
+    width: 280px;
+}
+.features-item:not(:last-child) {
+    margin-right: 80px;
+}
+
+.features-item-title {
+    text-transform: uppercase;
+    color: #222;
+    font-size: 18px;
+    line-height: 1.5;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+.features-item-text {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 15px;
+    line-height: 1.6;
+    color: #333;
+}
+.features-item-devider {
+    border: 0;
+    width: 8px;
+    height: 8px;
+    margin: 0;
+    background-color: #ddd;
+    box-shadow: 16px 0 0 0 #ddd, 32px 0 0 0 #ddd;
+}
+/* //FEATURES */
+/* //MAIN CONTENT */
 
 /* RETINA BG */
 @media
